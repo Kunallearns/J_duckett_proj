@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chap_7-Forms</title>
+</head>
+<body>
+    <!-- This e.g. focuses on HTML only-->
+    <h1>This e.g. focuses on HTML - Forms only</h1>
+<form action="http://www.example.com/form.php" method="get">
+<fieldset> <!-- Fieldset groups similar input tags-->
+<legend>Your Details</legend>
+<label>Name: <input type="text" name="Name"></label><br>
+<label for="Custemail">Email: </label>
+<input id="Custemail" type="email" name="Email">
+<!-- Whitespace in label after Name: and Email: gets honoured...no specific valiadtion required as the type chosen itelf is email-->
+<br>
+</fieldset>
+<br>
+
+<fieldset>
+
+<legend>Your Review</legend>
+<p><label for="hear-about">How did you hear about us?</label>
+<select id="hear-about" name="refs"  >
+  <!-- Name attribute indicates what form element should the data be sent to...size="3" size attribute shows the visible options by default...multiple="multiple".multiple attri allows the fesabilit of choosing multiple options  -->
+  <option value="google">Google</option>
+  <option value="Linkedin" selected="selected">Linkedin</option><!-- selected attribute allows the default value when the form gets displayed-->
+  <option value="Aquintance">Internal ref</option>
+  <option value="Official-Website">Co. website</option>
+</select></p>
+
+<p><label>Would you visit again?</label></p>
+<input id="Yes" type="radio" name="visit" value="Y">
+<label for="Yes">Yes</label><!-- </input> doesnt exists -->
+<input id="No" type="radio" name="visit" value="N">
+<label for="No">No</label>
+<input id="Maybe" type="radio" name="visit" value="M">
+<label for="Maybe">Maybe</label>
+
+<p><label for="comments">Comments</label><br>
+<textarea rows="4" cols="40" id="comments">Add your comments here</textarea>
+<!-- rows and col count to define how big the text area should be-->
+</p>
+<p><label><input type="checkbox" name="subscribe" checked="checked">Sign me up for the email updates</label></p>
+
+<p><input type="submit" value="submit review" /></p>
+</fieldset>
+
+</form>
+</body>
+</html>
